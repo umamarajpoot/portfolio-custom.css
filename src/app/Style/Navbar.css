@@ -1,0 +1,169 @@
+/* General navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Adjusted padding for better space */
+  background-color: white;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: .1px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-highlight {
+  color: #6c63ff;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Navbar Links Styling */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  justify-content: center; /* Center the links horizontally */
+  flex-grow: 1; /* Make the links take available space */
+}
+
+.navLinks li {
+  margin: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #6c63ff; /* Change color on hover */
+}
+
+.navLinks a.active {
+  color: #6c63ff; /* Active link color */
+}
+
+/* Contact Button Styling */
+.contactButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 0; /* Adjusted to align button with the navbar */
+}
+
+.contactButton .btn {
+  background-color: #6c63ff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.contactButton .btn:hover {
+  background-color: #5a54e0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 5px; /* Shift the hamburger icon slightly down */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+/* Mobile View Styling */
+@media screen and (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .navLinks.active {
+    display: flex; /* Visible on menu toggle */
+  }
+
+  .hamburger {
+    display: flex; /* Visible on mobile */
+    top: 10px; /* Slightly lower the hamburger icon for better alignment */
+  }
+
+  .contactButton {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 250px; /* Control max-width */
+  }
+
+  .contactButton .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Adjust Logo for Mobile */
+  .logo h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .logo-highlight {
+    font-size: 30px;
+  }
+
+  /* Adjust Navbar for mobile */
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align logo and links to the left */
+    padding: 20px; /* Add extra space for mobile */
+  }
+
+  .navLinks {
+    width: 100%; /* Make navLinks take full width on mobile */
+    padding: 0;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .navLinks li {
+    display: block; /* Stack the nav items */
+  }
+}

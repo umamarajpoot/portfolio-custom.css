@@ -1,0 +1,206 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f9f9ff;
+  gap: 30px;
+  min-height: 100vh; 
+  flex-wrap: wrap;
+  text-align: center; 
+}
+
+
+.content {
+  flex: 1;
+  max-width: 50%;
+  padding: 0 20px;
+}
+
+.intro {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.5;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.highlight {
+  color: purple;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5a0080;
+}
+
+/* Image Section */
+.imageContainer {
+  flex: 1;
+  max-width: 45%;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorations */
+.decorations {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0ff;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .content {
+    max-width: 60%;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .imageContainer {
+    max-width: 50%;
+  }
+
+  .profileImage {
+    max-width: 80%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .imageContainer {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+
+  .profileImage {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .imageContainer {
+    max-width: 90%;
+  }
+
+  .profileImage {
+    width: 100%;
+    max-width: 250px;
+  }
+}

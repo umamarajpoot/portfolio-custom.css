@@ -1,0 +1,144 @@
+
+.aboutSection {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f9; 
+    gap: 40px;
+    min-height: 100vh;
+    flex-wrap: wrap; 
+    text-align: center;
+  }
+  
+
+  .profileImageContainer {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+    position: relative;
+  }
+  
+  .profileImage {
+    width: 100%;
+    max-width: 280px; 
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid #fff; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+  }
+  
+
+  .aboutContent {
+    flex: 2;
+    max-width: 55%;
+    padding: 20px;
+    position: relative;
+    text-align: left;
+  }
+  
+
+  .aboutSubtitle {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+
+  .aboutDescription {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    margin-right: 4rem;
+  }
+  
+
+  .highlight {
+    color: #8a2be2;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .highlight:hover {
+    color: #ff7e5f; 
+  }
+  
+
+  @media (max-width: 1024px) {
+    .aboutSection {
+      padding: 30px;
+      gap: 30px;
+    }
+  
+    .profileImageContainer {
+      max-width: 45%;
+    }
+  
+    .aboutContent {
+      max-width: 50%;
+    }
+  
+    .aboutSubtitle {
+      font-size: 28px;
+    }
+  
+    .aboutDescription {
+      font-size: 16px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .aboutSection {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .profileImageContainer {
+      max-width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    .aboutContent {
+      max-width: 100%;
+    }
+  
+    .aboutSubtitle {
+      font-size: 24px;
+    }
+  
+    .aboutDescription {
+      font-size: 14px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .aboutSubtitle {
+      font-size: 20px;
+    }
+  
+    .aboutDescription {
+      font-size: 12px;
+    }
+  
+    .highlight {
+      font-size: 14px;
+    }
+  
+    .profileImageContainer {
+      max-width: 90%;
+    }
+  }
+  
